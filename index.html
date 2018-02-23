@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>Emails</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="main as main">
+    <div class="body"><span id="header">Share "Board name" with others</span>
+      <email-editor emails="main.emails"></email-editor>
+    </div>
+    <div class="buttons">
+      <button ng-click="main.addEmail()" class="btn primary-btn">Add email</button>
+      <button ng-click="main.showCount()" class="btn primary-btn">Get emails count</button>
+    </div>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
+    <script src="app/common/common.module.js"></script>
+    <script src="app/common/emailEditor/email.factory.js"></script>
+    <script src="app/common/emailEditor/emailEditor.component.js"></script>
+    <script src="app/common/emailEditor/emailBlock/emailBlock.component.js"></script>
+  </body>
+</html>
